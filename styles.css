@@ -1,0 +1,848 @@
+/* ===========================
+   ZERO 7 MEN'S WEAR - STYLES
+   =========================== */
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --black: #000000;
+  --lime: #c8f400;
+  --red: #c8102e;
+  --white: #ffffff;
+  --dark-gray: #111111;
+  --font-condensed: 'Barlow Condensed', sans-serif;
+  --font-body: 'Barlow', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--black);
+  color: var(--white);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+}
+
+/* ===========================
+   NAVBAR
+   =========================== */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 40px;
+  background-color: var(--black);
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-circle {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--black);
+  border: 2px solid #333;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.brand-name {
+  font-family: var(--font-condensed);
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--lime);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 60px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav-links a {
+  color: var(--white);
+  text-decoration: none;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 400;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: var(--lime);
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  margin-left: auto;
+}
+
+.hamburger span {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background: var(--white);
+  transition: all 0.3s;
+}
+
+/* ===========================
+   ARROW BUTTON (shared)
+   =========================== */
+.arrow-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: var(--lime);
+  color: var(--black);
+  font-size: 1.8rem;
+  font-weight: 900;
+  text-decoration: none;
+  transition: transform 0.2s, background-color 0.2s;
+  flex-shrink: 0;
+}
+
+.arrow-btn:hover {
+  transform: scale(1.08);
+  background-color: #b5e000;
+}
+
+/* ===========================
+   HERO SECTION
+   =========================== */
+.hero {
+  min-height: 100vh;
+  background-color: var(--black);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 40px 60px;
+  position: relative;
+  text-align: center;
+}
+
+.hero-location {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  letter-spacing: 0.25em;
+  color: var(--white);
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.pin-icon {
+  color: var(--lime);
+  font-size: 0.7rem;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.hero-title-green {
+  font-family: var(--font-condensed);
+  font-size: clamp(5rem, 12vw, 11rem);
+  font-weight: 900;
+  color: var(--lime);
+  text-transform: uppercase;
+  line-height: 0.9;
+  letter-spacing: -0.01em;
+}
+
+.hero-row2 {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.hero-title-outline {
+  font-family: var(--font-condensed);
+  font-size: clamp(5rem, 12vw, 11rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 0.9;
+  letter-spacing: -0.01em;
+  color: transparent;
+  -webkit-text-stroke: 2px var(--white);
+}
+
+.hero-arrow-top {
+  align-self: flex-start;
+  margin-top: 10px;
+}
+
+.shop-btn {
+  display: inline-block;
+  margin-top: 48px;
+  padding: 20px 70px;
+  background-color: var(--lime);
+  color: var(--black);
+  font-family: var(--font-condensed);
+  font-size: 1.3rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.shop-btn:hover {
+  transform: scale(1.04);
+  background-color: #b5e000;
+}
+
+/* ===========================
+   PRODUCTS SECTION
+   =========================== */
+.products {
+  background-color: var(--black);
+  padding: 80px 40px 60px;
+  position: relative;
+}
+
+.section-title {
+  font-family: var(--font-condensed);
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.red-title {
+  color: var(--red);
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto 48px;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.product-img-wrap {
+  width: 100%;
+  aspect-ratio: 3/4;
+  overflow: hidden;
+  border-radius: 4px;
+  background: #1a1a1a;
+}
+
+.product-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s;
+}
+
+.product-card:hover .product-img-wrap img {
+  transform: scale(1.05);
+}
+
+.product-name {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.footer-url {
+  font-size: 0.85rem;
+  color: #aaaaaa;
+  margin-top: 20px;
+}
+
+/* ===========================
+   VISION & MISSION SECTION
+   =========================== */
+.vision {
+  background-color: var(--black);
+  padding: 80px 40px 60px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.vision-left {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+}
+
+.vision-img-frame {
+  border: 4px solid var(--lime);
+  padding: 6px;
+  display: inline-block;
+  max-width: 320px;
+}
+
+.vision-img-frame img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  display: block;
+}
+
+.vision-arrow {
+  position: absolute;
+  bottom: -20px;
+  right: 40px;
+}
+
+.vision-title {
+  font-family: var(--font-condensed);
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  font-weight: 900;
+  color: var(--lime);
+  text-transform: uppercase;
+  line-height: 1;
+  margin-bottom: 32px;
+}
+
+.vision-block {
+  margin-bottom: 28px;
+}
+
+.vision-sub {
+  font-family: var(--font-condensed);
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--lime);
+  letter-spacing: 0.1em;
+  margin-bottom: 8px;
+}
+
+.vision-right p {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--white);
+  line-height: 1.7;
+}
+
+.vision-footer-url {
+  grid-column: 1 / -1;
+  text-align: left;
+}
+
+/* ===========================
+   TEAM SECTION
+   =========================== */
+.team {
+  background-color: var(--black);
+  padding: 80px 40px 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.team-header {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.team-title {
+  font-family: var(--font-condensed);
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  font-weight: 900;
+  color: var(--lime);
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.team-arrow {
+  width: 80px;
+  height: 80px;
+  font-size: 2rem;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  position: relative;
+}
+
+/* Lime green bar behind team photos */
+.team-grid::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-70%);
+  height: 70px;
+  background-color: var(--lime);
+  z-index: 0;
+}
+
+.team-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+  z-index: 1;
+}
+
+.team-img-wrap {
+  width: 100%;
+  aspect-ratio: 4/5;
+  overflow: hidden;
+}
+
+.team-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+  transition: transform 0.3s;
+}
+
+.team-card:hover .team-img-wrap img {
+  transform: scale(1.04);
+}
+
+.team-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 0 4px;
+}
+
+.team-num {
+  font-family: var(--font-condensed);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--white);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.team-name {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: 0.05em;
+}
+
+.team-role {
+  font-size: 0.8rem;
+  color: #cccccc;
+}
+
+/* ===========================
+   CONTACT SECTION
+   =========================== */
+.contact {
+  background-color: var(--black);
+  padding-top: 60px;
+}
+
+.contact-banner {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+.contact-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.contact-arrow {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  z-index: 2;
+}
+
+.together-title {
+  position: absolute;
+  bottom: 16px;
+  right: 80px;
+  font-family: var(--font-condensed);
+  font-size: clamp(3rem, 7vw, 6rem);
+  font-weight: 900;
+  color: var(--lime);
+  text-transform: uppercase;
+  z-index: 2;
+  line-height: 1;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: flex-start;
+  gap: 80px;
+  padding: 40px 40px 20px;
+  flex-wrap: wrap;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.contact-icon {
+  width: 44px;
+  height: 44px;
+  background-color: var(--lime);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.contact-label {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 4px;
+}
+
+.contact-value {
+  font-size: 0.9rem;
+  color: #cccccc;
+}
+
+.contact-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 40px 24px;
+  border-top: 1px solid #222;
+}
+
+.contact-footer p {
+  font-size: 0.85rem;
+  color: #aaaaaa;
+}
+
+.year-text {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #555;
+}
+
+.year-highlight {
+  font-family: var(--font-condensed);
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--lime);
+}
+
+/* ===========================
+   THANK YOU SECTION
+   =========================== */
+.thankyou {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.thankyou-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.thankyou-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 1;
+}
+
+.thankyou-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.thankyou-text-row {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.thankyou-title {
+  font-family: var(--font-condensed);
+  font-size: clamp(4rem, 10vw, 9rem);
+  font-weight: 900;
+  color: var(--lime);
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.thankyou-sub {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--white);
+  letter-spacing: 0.3em;
+}
+
+/* ===========================
+   RESPONSIVE — TABLET
+   =========================== */
+@media (max-width: 900px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .vision {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 60px 24px;
+  }
+
+  .vision-left {
+    justify-content: center;
+  }
+
+  .vision-footer-url {
+    grid-column: 1;
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+
+  .team-grid::before {
+    display: none;
+  }
+
+  .contact-info {
+    gap: 32px;
+  }
+}
+
+/* ===========================
+   RESPONSIVE — MOBILE
+   =========================== */
+@media (max-width: 600px) {
+  .navbar {
+    padding: 14px 20px;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: var(--black);
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links a {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  .hamburger {
+    display: flex;
+    z-index: 1001;
+  }
+
+  .hamburger.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  .hero {
+    padding: 90px 20px 50px;
+  }
+
+  .hero-title-green,
+  .hero-title-outline {
+    font-size: clamp(3.5rem, 18vw, 6rem);
+  }
+
+  .arrow-btn {
+    width: 52px;
+    height: 52px;
+    font-size: 1.4rem;
+  }
+
+  .hero-arrow-top {
+    display: none;
+  }
+
+  .shop-btn {
+    padding: 16px 48px;
+    font-size: 1.1rem;
+  }
+
+  .products {
+    padding: 60px 20px 40px;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .team {
+    padding: 60px 20px 40px;
+  }
+
+  .team-header {
+    gap: 16px;
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .contact-info {
+    flex-direction: column;
+    gap: 24px;
+    padding: 30px 20px 16px;
+  }
+
+  .contact-footer {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+    padding: 16px 20px;
+  }
+
+  .together-title {
+    font-size: clamp(2.5rem, 12vw, 5rem);
+    right: 16px;
+    bottom: 10px;
+  }
+
+  .thankyou-title {
+    font-size: clamp(3rem, 16vw, 6rem);
+  }
+
+  .brand-name {
+    font-size: 0.85rem;
+  }
+
+  .vision-img-frame img {
+    height: 280px;
+  }
+}
+
+/* ===========================
+   SCROLL REVEAL ANIMATIONS
+   =========================== */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.product-card.reveal { transition-delay: calc(var(--i, 0) * 0.1s); }
+.team-card.reveal    { transition-delay: calc(var(--i, 0) * 0.1s); }
